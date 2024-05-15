@@ -17,7 +17,7 @@ describe('App', () => {
     render(<App />);
 
     const titleElement = screen.getByTestId('title');
-    expect(titleElement.textContent).toBe('App for manage To Do list');
+    expect(titleElement.textContent).toBe('My TODO list');
   });
 
   it('Que contenga la tarea "Mi Primera Tarea"', () => {
@@ -26,4 +26,22 @@ describe('App', () => {
     const listItemElement = screen.getByText('Mi Primera Tarea');
     expect(listItemElement).toBeDefined();
   });
+
+ it('Que contenga la tarea "Comprar Leche"', () => {
+
+     render(<App />)
+
+     const listItemElement = screen.getByText('Comprar Leche');
+     expect(listItemElement).toBeDefined();
+    
+ });
+
+ it('Que contenga la tarea "Leer un libro"', () => {
+     render(<App />)
+     
+     const listItemElement = screen.getByText('Leer un libro');
+     expect(listItemElement).toBeDefined();
+
+
+ })
 });
